@@ -1,0 +1,25 @@
+  - platform: template
+    sensors:
+      office_heating_status:
+        friendly_name: "Office Heating Status"
+        value_template: "{{ is_state_attr('climate.office', 'hvac_action', 'idle') == false }}"
+      master_bedroom_heating_status:
+        friendly_name: "Master Bedroom Heating Status"
+        value_template: "{{ is_state_attr('climate.master_bedroom', 'hvac_action', 'idle') == false }}"
+      guest_bedroom_heating_status:
+        friendly_name: 'Guest Bedroom Heating Status'
+        value_template: "{{ is_state_attr('climate.guest_bedroom', 'hvac_action', 'idle') == false }}"
+      kitchen_heating_status:
+        friendly_name: 'Kitchen Heating Status'
+        value_template: "{{ is_state_attr('climate.kitchen', 'hvac_action', 'idle') == false }}"
+      hall_heating_status:
+        friendly_name: 'Hall Heating Status'
+        value_template: "{{ is_state_attr('climate.hall', 'hvac_action', 'idle') == false }}"
+      sitting_room_heating_status:
+        friendly_name: 'Sitting Room Heating Status'
+        value_template: "{{ is_state_attr('climate.sitting_room', 'hvac_action', 'idle') == false }}"
+      thermostat_heating_status:
+        friendly_name: 'Thermostat Heating Status'
+        value_template: "{{ is_state_attr('climate.thermostat_1', 'hvac_action', 'idle') == false }}"
+
+
